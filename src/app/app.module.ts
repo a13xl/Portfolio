@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactFormComponent,
     HeaderComponent,
+    AboutMeComponent,
   ],
   imports: [
     BrowserModule,
