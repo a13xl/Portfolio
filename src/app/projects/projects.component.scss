@@ -1,3 +1,6 @@
+// import globale style
+@import "src/_globals.scss";
+
 .project-container {
     margin-top: 80px;
     display: flex;
@@ -11,16 +14,53 @@ h2 {
 /*     border: 1px solid red; */
 }
 
-/* .project-headline {
-    height: 60px;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid #0A0A0B;
-} */
-
 .underline {
     height: 4px;
     width: 256px;
     margin-top: 13px;
+    margin-bottom: calc(79px - $spacing-L);
     background-color: #0A0A0B;
     border-radius: 6px;
+}
+
+.project-box {
+    height: 527px;
+    width: 100vw;
+    max-width: 100%;
+    margin-top: $spacing-L;
+    background-color: $background-color02;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project {
+    display: flex;
+    gap: 126px;
+
+    img {
+        height: 301px;
+        border: 1px solid black;
+    }
+}
+
+.project-txt {
+    width: 478px;
+    gap: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    div {
+        display: flex;
+        gap: $spacing-L;
+
+        button {
+            padding: 20px 30px 20px 30px;
+        }
+    }
 }
