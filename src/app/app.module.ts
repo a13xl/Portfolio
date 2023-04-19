@@ -7,6 +7,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
     ContactFormComponent,
     HeaderComponent,
     AboutMeComponent,
+    NavigationBarComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,

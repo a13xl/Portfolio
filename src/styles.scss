@@ -1,10 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* ========== variables ========== */
+/* colors */
+$color-background2: #F2F2F2;
+$color-primary: #126BFB;
+$color-secondary: #EEF4FF;
+$color-action: #7BB9FA;
+$color-grey: #5b5963;
+$color-black: #282828;
+$color-red: #F34E4E;
+$color-hover: #0349B9;
+
+/* spacing */
+$spacing-XS: 16px;
+$spacing-L: 32px;
+$spacing-XL: 46px;
+$spacing-XXL: 142px;
+
+
+/* globale style */
 body {
     margin: 0;
     font-family: 'karla', sans-serif;
     font-size: 18px;
 }
 
-.margin-site {
-    margin: 0px 50px 0px 50px;
+h1 {
+    font-size: 60px;
 }
+
+h2 {
+    font-size: 36px;
+}
+
+.margin-site {
+    margin: 0px 10% 0px 10%;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                        supported by Chrome, Edge, Opera and Firefox */
+  }

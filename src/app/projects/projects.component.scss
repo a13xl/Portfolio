@@ -1,0 +1,26 @@
+.project-container {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    margin: 0;
+    color: #0E0D0D;
+/*     border: 1px solid red; */
+}
+
+/* .project-headline {
+    height: 60px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid #0A0A0B;
+} */
+
+.underline {
+    height: 4px;
+    width: 256px;
+    margin-top: 13px;
+    background-color: #0A0A0B;
+    border-radius: 6px;
+}

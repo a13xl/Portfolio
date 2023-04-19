@@ -1,0 +1,37 @@
+.navi-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+        height: 50px;
+    }
+
+    img {
+        height: 50px;
+    }
+}
+
+.navi-link {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    a {
+        height: 30px;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        color: #bababa;
+        text-decoration: none;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+            color: #000;
+            border-bottom: 2px solid #000;
+        }
+    }
+}
