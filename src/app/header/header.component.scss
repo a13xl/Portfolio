@@ -1,11 +1,15 @@
+// import globale style
+@import "src/_globals.scss";
+
 $height: 556px;
 
 .header-container {
     height: $height;
     display: flex;
 
-    background-color: grey;
+    background-color: white;
     color: white;
+    text-shadow: 2px 2px 0 black;
 }
 
 .header-img {
@@ -28,6 +32,9 @@ $height: 556px;
     width: 511px;
     padding-top: 109px;
     text-align: center;
+    z-index: 1;
+
+    mix-blend-mode: difference;
 }
 
 .scroll-down {

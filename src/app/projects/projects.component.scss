@@ -33,10 +33,6 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.project {
-    display: flex;
     gap: 126px;
 
     img {
@@ -45,9 +41,14 @@ h2 {
     }
 }
 
+.project-reverse {
+    flex-direction: row-reverse;
+}
+
 .project-txt {
     width: 478px;
     gap: 45px;
+    color: $color-grey;
 
     display: flex;
     justify-content: center;
@@ -64,3 +65,4 @@ h2 {
         }
     }
 }
+

@@ -1,0 +1,79 @@
+// import globale style
+@import "src/_globals.scss";
+$spacing-input-label-top: 20px;
+$width-input: 612px;
+
+.contact-container {
+    margin: calc(58px - 0.83em) 0 56px 0;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    span {
+        width: $width-input;
+        color: $color-grey;
+        text-align: center;
+    }
+
+    a {
+        color: $color-primary;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-action;
+        }
+    }
+}
+
+.contact-form {
+    margin-top: calc(60px - $spacing-input-label-top);
+
+    display: flex;
+    flex-direction: column;
+
+    label {
+        margin: $spacing-input-label-top 0 16px 0;
+        color: $color-black;
+    }
+
+    input, textarea {
+        height: 39px;
+        width: $width-input;
+        padding: 0 13.5px;
+
+        font-size: 18px;
+        color: $color-black;
+        background-color: $color-secondary;
+        border-radius: 6px;
+        border: 0;
+
+        &:focus, :focus-visible {
+            outline: 1px solid $color-primary;
+        }
+    }
+
+    textarea {
+        height: 179px - 22px;
+        padding-top: 11px;
+        padding-bottom: 11px;
+
+        resize: none;
+    }
+
+    button {
+        margin-top: 14px;
+        padding: 20px 41px;
+        font-weight: normal;
+    }
+}
+
+.input-invalid {
+    background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50%;
+    outline: 1px solid $color-red;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
