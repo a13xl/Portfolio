@@ -1,0 +1,26 @@
+// import globale style
+@import "src/_globals.scss";
+
+footer {
+    padding: 50px 0 75px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: $color-grey;
+}
+
+.footer-logo-container {
+    width: 50%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        height: 50px;
+    }
+}

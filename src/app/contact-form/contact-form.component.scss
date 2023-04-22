@@ -1,5 +1,6 @@
 // import globale style
 @import "src/_globals.scss";
+
 $spacing-input-label-top: 20px;
 $width-input: 612px;
 
@@ -65,11 +66,23 @@ $width-input: 612px;
         margin-top: 14px;
         padding: 20px 41px;
         font-weight: normal;
+
+        &:disabled {
+            background-color: #b3c8ea;
+            border: 1px solid #b3c8ea;
+            cursor: unset;
+
+            &:hover {
+                background-color: #b3c8ea;
+            }
+        }
     }
 }
 
 .input-invalid {
-    background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50%;
+    /* background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50%; */
+    background: url("../../assets/img/icons/warning.png") no-repeat 98% 50%;
+    background-size: 20px;
     outline: 1px solid $color-red;
 }
 

@@ -14,21 +14,36 @@ export class ContactFormComponent {
   @ViewChild('sendBtn') sendBtn!: ElementRef;
 
   validateInput(id) {
+    let sendBtn = this.sendBtn.nativeElement;
     let field = this.checkInputName(id);
-    let error;
+    let noError;
 
     if(id == 'nameField') {
-      error = this.checkName(field);
+      noError = this.checkName(field);
     } else if(id == 'emailField') {
-      error = this.checkEmail(field);
+      noError = this.checkEmail(field);
     } else if(id == 'messageField') {
-      error = this.checkMessage(field);
-    } else {
-      // enable send button
+      noError = this.checkMessage(field);
     }
 
-    if(error === true) {
+    if(noError === false) {
       field.classList.add('input-invalid');
+      sendBtn.disabled = true;
+    } else {
+      this.enableButonByInput();
+    }
+  }
+
+  enableButonByInput() {
+    let nameField = this.nameField.nativeElement;
+    let emailField = this.emailField.nativeElement;
+    let messageField = this.messageField.nativeElement;
+    let sendBtn = this.sendBtn.nativeElement;
+
+    if(this.checkName(nameField) == true && this.checkEmail(emailField) == true && this.checkMessage(messageField) == true) {
+      sendBtn.disabled = false;
+    } else {
+      sendBtn.disabled = true;
     }
   }
 
@@ -39,26 +54,26 @@ export class ContactFormComponent {
   }
 
   checkEmail(inputField) {
-    debugger;
-    let email = inputField.value.name.toLowerCase();
+    let email = inputField.value.toLowerCase();
 
     const re = /\S+@\S+\.\S+/;
+
     return re.test(email);
   }
 
   checkMessage(inputField) {
-    if(inputField.value.length > 10) {
-      return false;
-    } else {
+    if(inputField.value.length > 25) {
       return true;
+    } else {
+      return false;
     }
   }
 
   checkName(inputField) {
     if(inputField.value.length > 1) {
-      return false;
-    } else {
       return true;
+    } else {
+      return false;
     }
   }
 
@@ -82,17 +97,21 @@ export class ContactFormComponent {
     console.log('Sending Mail', this.contactForm);
 
     let nameField = this.nameField.nativeElement;
+    let emailField = this.emailField.nativeElement; // NEU
     let messageField = this.messageField.nativeElement;
     let sendBtn = this.sendBtn.nativeElement;
 
     // sende/warte Animation
 
     nameField.disabled = true;
+    emailField.disabled = true;
     messageField.disabled = true;
     sendBtn.disabled = true;
 
     let fd = new FormData();
-    fd.append('name', nameField.value);
+    let requestingName = nameField.value + ' - [ ' + emailField.value + ' ] ';
+
+    fd.append('name', requestingName);
     fd.append('message', messageField.value);
     //senden
     await fetch('online Pfad zu PHP', {
@@ -102,6 +121,7 @@ export class ContactFormComponent {
 
     // Txt: Nachricht gesendet
     nameField.disabled = false;
+    emailField.disabled = false;
     messageField.disabled = false;
     sendBtn.disabled = false;
   }

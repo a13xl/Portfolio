@@ -33,7 +33,14 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 126px;
+}
+
+.project {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
 
     img {
         height: 301px;

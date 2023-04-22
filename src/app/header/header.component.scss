@@ -2,6 +2,7 @@
 @import "src/_globals.scss";
 
 $height: 556px;
+$width: 770px;
 
 .header-container {
     height: $height;
@@ -15,15 +16,30 @@ $height: 556px;
 .header-img {
     width: 100vw;
     max-width: 100%;
+
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-end;
     background: transparent;
+    flex-direction: column;
 
 
     img {
         position: relative;
-        height: $height;
+        height: auto;
+        width: $width;
+    }
+
+    svg {
+        position: absolute;
+        /* left: 50%; */
+        height: auto;
+        width: $width;
+        /* transform: translateY(0%) translateX(-50%); */
+
+        path {
+            fill: white;
+        }
     }
 }
 
@@ -35,16 +51,28 @@ $height: 556px;
     z-index: 1;
 
     mix-blend-mode: difference;
+
+    /* background: linear-gradient(to right, #000 100%, #fff 0%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
 
 .scroll-down {
     position: absolute;
-    height: $height;
-    width: 100%;
+    left: 50%;
+    right: 50%;
+    height: calc($height - 67px);
+
 
     display: flex;
     justify-content: center;
     align-items: flex-end;
+
+    a {
+        height: 54px;
+        border-radius: 100%;
+    }
 
     img {
         margin-bottom: 69px;
