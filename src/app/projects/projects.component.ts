@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import * as projectData from 'src/assets/projects.json';
 
 @Component({
@@ -6,25 +6,39 @@ import * as projectData from 'src/assets/projects.json';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent{
-  @ViewChild('allProjects') allProjects!: ElementRef;
-  @ViewChild('JSProjects') JSProjects!: ElementRef;
-  @ViewChild('angularProjects') angularProjects!: ElementRef;
-  @ViewChild('projectBox') projectBox!: ElementRef;
+export class ProjectsComponent implements OnInit{
+  // @ViewChild('allProjects') allProjects!: ElementRef;
 
   projects: any = projectData.default;
+  categories: Array<any> = [];
 
-  sortProjects(category: string) {
+  ngOnInit(): void {
+    this.projects.forEach(project => {
+      let category = project.category;
+
+      if(!this.categories.includes(category)) {
+        this.categories.push(category);
+      }
+    });
+  }
+
+/*   sortProjects(category: string) {
     this.enableBtns();
+    console.log(category);
 
-    
+    if(category == 'all') {
+      this.allProjects.nativeElement.disabled = true;
+    } else {
+      let projectname = category+'Projects';
+      //projectname.nativeElement.disabled = true;
+    }
   }
 
   enableBtns() {
     this.allProjects.nativeElement.disabled = false;
-    this.JSProjects.nativeElement.disabled = false;
-    this.angularProjects.nativeElement.disabled = false;
-  }
+    this.JavaScriptProjects.nativeElement.disabled = false;
+    this.AngularProjects.nativeElement.disabled = false;
+  } */
 
 
 }

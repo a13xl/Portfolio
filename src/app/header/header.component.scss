@@ -26,8 +26,9 @@ $width: 770px;
 
     img {
         position: relative;
-        height: auto;
+        height: $height;
         width: $width;
+        object-fit: contain;
     }
 
     svg {
