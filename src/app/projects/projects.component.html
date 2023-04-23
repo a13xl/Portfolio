@@ -2,7 +2,13 @@
     <h2>Meine Projekte</h2>
     <div class="underline"></div>
 
-    <div *ngFor="let project of projects; let i = index;" class="project-box">
+    <div class="category">
+        <button #allProjects [disabled]="true" class="btn btn-full" (click)="sortProjects('all')">Alle</button>
+        <button #JSProjects class="btn btn-full" (click)="sortProjects('JavaScript')">JavaScript</button>
+        <button #angularProjects class="btn btn-full" (click)="sortProjects('Angular')">Angular</button>
+    </div>
+
+    <div #projectBox *ngFor="let project of projects; let i = index;" class="project-box">
         <div [ngClass]="{'project-reverse': 0 != i % 2}" class="project margin-site">
             <img class="noselect" src="{{ project['picture'] }}">
             <div class="project-txt">

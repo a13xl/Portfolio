@@ -23,6 +23,25 @@ h2 {
     border-radius: 6px;
 }
 
+.category {
+    display: flex;
+    gap: 15px;
+
+    button {
+        padding: 20px 30px;
+
+        &:disabled {
+            background-color: #b3c8ea;
+            border: 1px solid #b3c8ea;
+            cursor: unset;
+
+            &:hover {
+                background-color: #b3c8ea;
+            }
+        }
+    }
+}
+
 .project-box {
     height: 527px;
     width: 100vw;
@@ -43,7 +62,8 @@ h2 {
     gap: 200px;
 
     img {
-        height: 301px;
+        /* height: 301px; */
+        width: 450px;
         border: 1px solid black;
     }
 }
@@ -68,7 +88,7 @@ h2 {
         gap: $spacing-L;
 
         button {
-            padding: 20px 30px 20px 30px;
+            padding: 20px 30px;
         }
     }
 }

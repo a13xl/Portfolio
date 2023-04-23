@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
+import { timeout } from 'rxjs';
 
 @Component({
   selector: 'app-contact-form',
@@ -12,6 +13,7 @@ export class ContactFormComponent {
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendBtn') sendBtn!: ElementRef;
+  @ViewChild('sentMessage') sentMessage!: ElementRef;
 
   validateInput(id) {
     let sendBtn = this.sendBtn.nativeElement;
@@ -30,17 +32,26 @@ export class ContactFormComponent {
       field.classList.add('input-invalid');
       sendBtn.disabled = true;
     } else {
-      this.enableButonByInput();
+      this.enableButton();
     }
   }
 
-  enableButonByInput() {
+  checkEnableButton() {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
-    let sendBtn = this.sendBtn.nativeElement;
 
     if(this.checkName(nameField) == true && this.checkEmail(emailField) == true && this.checkMessage(messageField) == true) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  enableButton() {
+    let sendBtn = this.sendBtn.nativeElement;
+
+    if(this.checkEnableButton() == true) {
       sendBtn.disabled = false;
     } else {
       sendBtn.disabled = true;
@@ -94,36 +105,62 @@ export class ContactFormComponent {
   }
 
   async sendMail() {
-    console.log('Sending Mail', this.contactForm);
+    if(this.checkEnableButton() == true) {
+      console.log('Sending Mail', this.contactForm);
 
-    let nameField = this.nameField.nativeElement;
-    let emailField = this.emailField.nativeElement; // NEU
-    let messageField = this.messageField.nativeElement;
-    let sendBtn = this.sendBtn.nativeElement;
+      let nameField = this.nameField.nativeElement;
+      let emailField = this.emailField.nativeElement; // NEU
+      let messageField = this.messageField.nativeElement;
+      let sendBtn = this.sendBtn.nativeElement;
 
-    // sende/warte Animation
+      // sende/warte Animation
+      this.disableContactForm();
 
-    nameField.disabled = true;
-    emailField.disabled = true;
-    messageField.disabled = true;
-    sendBtn.disabled = true;
+      let fd = new FormData();
+      let requestingName = nameField.value + ' - [ ' + emailField.value + ' ] ';
 
-    let fd = new FormData();
-    let requestingName = nameField.value + ' - [ ' + emailField.value + ' ] ';
+      fd.append('name', requestingName);
+      fd.append('message', messageField.value);
+      //senden
+      await fetch('online Pfad zu PHP', {
+        method: 'POST',
+        body: fd
+      });
 
-    fd.append('name', requestingName);
-    fd.append('message', messageField.value);
-    //senden
-    await fetch('online Pfad zu PHP', {
-      method: 'POST',
-      body: fd
-    });
+      // Txt: Nachricht gesendet
+      this.enableContactForm();
+      this.showSentMessage();
+      this.clearInputs();
+    }
+  }
 
-    // Txt: Nachricht gesendet
-    nameField.disabled = false;
-    emailField.disabled = false;
-    messageField.disabled = false;
-    sendBtn.disabled = false;
+  showSentMessage() {
+    let sentMessage = this.sentMessage.nativeElement;
+    sentMessage.classList.remove('d-none');
+
+    setTimeout(() => {
+      sentMessage.classList.add('d-none');
+    }, 5000);
+  }
+
+  disableContactForm() {
+    this.nameField.nativeElement.disabled = true;
+    this.emailField.nativeElement.disabled = true;
+    this.messageField.nativeElement.disabled = true;
+    this.sendBtn.nativeElement.disabled = true;
+  }
+
+  enableContactForm() {
+    this.nameField.nativeElement.disabled = false;
+    this.emailField.nativeElement.disabled = false;
+    this.messageField.nativeElement.disabled = false;
+    this.sendBtn.nativeElement.disabled = false;
+  }
+
+  clearInputs() {
+    this.nameField.nativeElement.value = '';
+    this.emailField.nativeElement.value = '';
+    this.messageField.nativeElement.value = '';
   }
 
 }

@@ -90,3 +90,16 @@ $width-input: 612px;
     display: flex;
     justify-content: flex-end;
 }
+
+.sent-message {
+    position: absolute;
+    margin-top: 30%;
+    
+    span {
+        padding: 13px 21px;
+        color: white;
+        background-color: $color-primary;
+        font-weight: bold;
+        border-radius: 6px;
+    }
+}

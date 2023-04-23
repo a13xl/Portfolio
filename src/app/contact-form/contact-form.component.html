@@ -5,18 +5,24 @@
     <form (submit)="sendMail()" ngNativeValidate #contactForm class="contact-form">
         <label>Name</label>
         <input #nameField type="text" name="name" required (focus)="resetInputError('nameField')"
-        (focusout)="validateInput('nameField')" (keyup)="enableButonByInput()" maxlength="75">
+        (focusout)="validateInput('nameField')" (keyup)="enableButton()" maxlength="75">
 
         <label>E-Mail Adresse</label>
         <input #emailField type="email" name="name" required (focus)="resetInputError('emailField')"
-        (focusout)="validateInput('emailField')" (keyup)="enableButonByInput()" maxlength="75">
+        (focusout)="validateInput('emailField')" (keyup)="enableButton()" maxlength="75">
 
         <label>Nachricht</label>
         <textarea #messageField type="text" name="message" required (focus)="resetInputError('messageField')"
-        (focusout)="validateInput('messageField')" (keyup)="enableButonByInput()" maxlength="2048"></textarea>
+        (focusout)="validateInput('messageField')" (keyup)="enableButton()" maxlength="2048"></textarea>
         
         <div class="btn-container">
             <button class="btn btn-full noselect" #sendBtn [disabled]="true" title="Bitte Felder ausfüllen">Senden</button>
         </div>
     </form>
+
+    <div #sentMessage class="sent-message d-none">
+        <span>
+            Nachricht versendet
+        </span>
+    </div>
 </div>

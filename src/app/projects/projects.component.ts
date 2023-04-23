@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import * as projectData from 'src/assets/projects.json';
 
 @Component({
@@ -6,11 +6,24 @@ import * as projectData from 'src/assets/projects.json';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit{
+export class ProjectsComponent{
+  @ViewChild('allProjects') allProjects!: ElementRef;
+  @ViewChild('JSProjects') JSProjects!: ElementRef;
+  @ViewChild('angularProjects') angularProjects!: ElementRef;
+  @ViewChild('projectBox') projectBox!: ElementRef;
+
   projects: any = projectData.default;
 
-  ngOnInit(): void {
-    /* console.log(this.projects); */
+  sortProjects(category: string) {
+    this.enableBtns();
+
+    
+  }
+
+  enableBtns() {
+    this.allProjects.nativeElement.disabled = false;
+    this.JSProjects.nativeElement.disabled = false;
+    this.angularProjects.nativeElement.disabled = false;
   }
 
 

@@ -30,6 +30,10 @@ h2 {
                         supported by Chrome, Edge, Opera and Firefox */
 }
 
+.d-none {
+    display: none !important;
+}
+
 .btn {
     font-size: 18px;
     border: 1px solid $color-primary;
