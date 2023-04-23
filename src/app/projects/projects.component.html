@@ -2,8 +2,8 @@
     <h2>Meine Projekte</h2>
     <div class="underline"></div>
 
-    <div *ngFor="let project of projects; let i = index;" [ngClass]="{'project-reverse': 0 != i % 2}" class="project-box">
-        <div class="project margin-site">
+    <div *ngFor="let project of projects; let i = index;" class="project-box">
+        <div [ngClass]="{'project-reverse': 0 != i % 2}" class="project margin-site">
             <img class="noselect" src="{{ project['picture'] }}">
             <div class="project-txt">
                 <h2>{{ project['name'] }}</h2>
