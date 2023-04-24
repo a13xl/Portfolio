@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, QueryList, ViewChild } from '@angular/core';
 import * as projectData from 'src/assets/projects.json';
 
 @Component({

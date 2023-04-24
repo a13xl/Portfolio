@@ -93,3 +93,9 @@ h2 {
     }
 }
 
+@media (max-width: 1670px) {
+    .project {
+        justify-content: space-between;
+        gap: 0;
+    }
+}

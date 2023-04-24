@@ -8,14 +8,14 @@ $width: 770px;
     height: $height;
     display: flex;
 
-    background-color: white;
-    color: white;
-    text-shadow: 2px 2px 0 black;
+    /* background-color: white; */
+    color: black;
 }
 
 .header-img {
     width: 100vw;
     max-width: 100%;
+    overflow: hidden;
 
     display: flex;
     align-items: flex-end;
@@ -35,8 +35,8 @@ $width: 770px;
         position: absolute;
         /* left: 50%; */
         height: auto;
-        width: $width;
-        /* transform: translateY(0%) translateX(-50%); */
+        width: calc($width + 3px);
+        transform: translateY(2%) translateX(0.2%);
 
         path {
             fill: white;
@@ -51,7 +51,7 @@ $width: 770px;
     text-align: center;
     z-index: 1;
 
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
 
     /* background: linear-gradient(to right, #000 100%, #fff 0%);
     background-clip: text;
@@ -63,7 +63,7 @@ $width: 770px;
     position: absolute;
     left: 50%;
     right: 50%;
-    height: calc($height - 67px);
+    height: calc($height - 16px);
 
 
     display: flex;
@@ -77,6 +77,7 @@ $width: 770px;
 
     img {
         margin-bottom: 69px;
+        filter: invert(1);
         border-radius: 100%;
         cursor: pointer;
 
@@ -84,4 +85,49 @@ $width: 770px;
             transform:scale(1.1);
         }
     }
+}
+
+@media (max-width: 1992px) {
+    .header-container {
+        height: 630px;
+        color: white;
+        text-shadow: 2px 1px 0 black;
+    }
+
+    .header-img {
+        margin: 0;
+
+        img {
+            height: 700px;
+            width: 100vw;
+            max-width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        svg {
+            width: 100vw;
+            max-width: 100%;
+
+            transform: translateY(2%) translateX(0.01%);
+        }
+    }
+
+    .scroll-down {
+        img{
+            filter: invert(0);
+        }
+    }
+}
+
+@media (max-width: 1615px) {
+    .header-img {
+        img{
+            height: $height;
+        }
+    }
+}
+
+@media (max-width: 1269px) {
+    // mobile screen
 }

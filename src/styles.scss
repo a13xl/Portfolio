@@ -2,6 +2,10 @@
 @import "src/_globals.scss";
 
 /* globale style */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'karla', sans-serif;

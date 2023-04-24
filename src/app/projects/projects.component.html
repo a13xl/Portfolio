@@ -2,10 +2,10 @@
     <h2>Meine Projekte</h2>
     <div class="underline"></div>
 
-    <div class="category">
+    <div class="category margin-site">
         <button id="all" (click)="sortProjectCategory('all')" [disabled]="true" class="btn btn-full">Alle</button>
         <div *ngFor="let category of categories; let i = index;">
-            <button #{{category}} id="{{ category }}" (click)="sortProjectCategory(category)" class="btn btn-full">{{ category }}</button>
+            <button #{{ category }} id="{{ category }}" (click)="sortProjectCategory(category)" class="btn btn-full">{{ category }}</button>
         </div>
     </div>
 
