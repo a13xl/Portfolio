@@ -10,6 +10,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,17 @@ import { FooterComponent } from './footer/footer.component';
     NavigationBarComponent,
     ProjectsComponent,
     FooterComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    RouterModule.forRoot([
+      {path: '', component: HomeComponent},
+      {path: 'about-me', component: AboutMeComponent},
+    ]),
+    /* AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule */
   ],
   providers: [],
   bootstrap: [AppComponent]
