@@ -22,6 +22,17 @@ export class ProjectsComponent implements OnInit{
     });
   }
 
+  sortProjectCategory(category: string) {
+    console.log('Sort to Category:', category)
+    this.enableBtns();
+  }
+
+  enableBtns() {
+    this.categories.forEach(element => {
+      
+    });
+  }
+
 /*   sortProjects(category: string) {
     this.enableBtns();
     console.log(category);

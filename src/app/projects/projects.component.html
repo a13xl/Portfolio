@@ -3,9 +3,9 @@
     <div class="underline"></div>
 
     <div class="category">
-        <button [disabled]="true" class="btn btn-full">Alle</button>
+        <button id="all" (click)="sortProjectCategory('all')" [disabled]="true" class="btn btn-full">Alle</button>
         <div *ngFor="let category of categories; let i = index;">
-            <button id="{{ category }}" class="btn btn-full">{{ category }}</button>
+            <button #{{category}} id="{{ category }}" (click)="sortProjectCategory(category)" class="btn btn-full">{{ category }}</button>
         </div>
     </div>
 
