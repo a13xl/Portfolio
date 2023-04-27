@@ -1,0 +1,49 @@
+// import globale style
+@import "src/_globals.scss";
+
+h2 {
+    margin: 0;
+}
+
+.box {
+    max-width: 100%;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    background-color: $background-color02;
+}
+
+.about-me-container {
+    height: 581px;
+
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        height: 100%;
+        width: 50%;
+        object-fit: cover;
+    }
+}
+
+.about-me-txt {
+    padding: 0 7% 0 7%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    span {
+        color: $color-black;
+        text-align: center;
+    }
+}
+
+.underline-h2 {
+    height: 4px;
+    width: 166px;
+    margin-top: 10px;
+    margin-bottom: calc(79px - $spacing-L);
+    background-color: #0A0A0B;
+    border-radius: 6px;
+}
