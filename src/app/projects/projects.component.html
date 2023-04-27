@@ -3,13 +3,13 @@
     <div class="underline"></div>
 
     <div class="category margin-site">
-        <button id="all" (click)="sortProjectCategory('all')" [disabled]="true" class="btn btn-full">Alle</button>
+        <button #categoryAllBtn (click)="sortProjectCategory(99, 'all')" [disabled]="true" class="btn btn-full">Alle</button>
         <div *ngFor="let category of categories; let i = index;">
-            <button #{{ category }} id="{{ category }}" (click)="sortProjectCategory(category)" class="btn btn-full">{{ category }}</button>
+            <button #categoryBtn (click)="sortProjectCategory(i, category)" class="btn btn-full">{{ category }}</button>
         </div>
     </div>
 
-    <div #projectBox *ngFor="let project of projects; let i = index;" class="project-box">
+    <div #projectBox *ngFor="let project of projectsSort; let i = index;" class="project-box">
         <div [ngClass]="{'project-reverse': 0 != i % 2}" class="project margin-site">
             <img class="noselect" src="{{ project['picture'] }}">
             <div class="project-txt">
