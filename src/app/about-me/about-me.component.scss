@@ -2,7 +2,8 @@
 @import "src/_globals.scss";
 
 h2 {
-    margin: 0;
+    margin-top: 51px;
+    margin-bottom: 0;
 }
 
 .box {
@@ -13,15 +14,15 @@ h2 {
 }
 
 .about-me-container {
-    height: 581px;
+    /* height: 581px; */
 
     display: flex;
     justify-content: space-between;
 
     img {
-        height: 100%;
         width: 50%;
         object-fit: cover;
+        object-position: top;
     }
 }
 
@@ -43,7 +44,115 @@ h2 {
     height: 4px;
     width: 166px;
     margin-top: 10px;
-    margin-bottom: calc(79px - $spacing-L);
+    margin-bottom: calc(3px + $spacing-L);
     background-color: #0A0A0B;
     border-radius: 6px;
+}
+
+.underline-txt {
+    height: 1px;
+    width: 166px;
+    margin-top: 29px;
+    margin-bottom: calc(22px + $spacing-L);
+    background-color: #0A0A0B;
+    border-radius: 6px;
+}
+
+.skill-box {
+    margin-bottom: 55px;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    div {
+        position: relative;
+        height: 80px;
+        width: 85px;
+        margin-bottom: 15px;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    span {
+        position: relative;
+        height: 40px;
+        width: 100%;
+        margin-top: -45px;
+
+        font-size: 16px;
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 1;
+    }
+}
+
+.quote-container {
+    margin-bottom: 64px;
+    background-color: $background-color02;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quote-icon {
+    height: 82px;
+    width: 82px;
+    margin: 38px 0 38px 0;
+
+    background-color: white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-txt {
+    margin: 0 15% 6px 15%;
+    text-align: center;
+}
+
+.quote-autor-img {
+    height: 75px;
+    width: 75px;
+    margin: 26px 0;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.quote-autor-name {
+    font-weight: bold;
+}
+
+.underline-quote {
+    margin: 36px 0 38px 0;
+    display: flex;
+    gap: 4px;
+
+    div {
+        background-color: $color-primary;
+    }
+
+    .underline-quote-line {
+        height: 6px;
+        width: 23px;
+        border-radius: 6px;
+    }
+
+    .underline-quote-circle {
+        height: 6px;
+        width: 6px;
+        border-radius: 100%;
+    }
 }

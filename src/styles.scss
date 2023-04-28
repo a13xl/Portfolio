@@ -20,6 +20,15 @@ h2 {
     font-size: 36px;
 }
 
+app-navigation-bar {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    max-width: 100%;
+
+    z-index: 99;
+}
+
 .margin-site {
     margin: 0px 10% 0px 10%;
 }

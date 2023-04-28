@@ -1,5 +1,13 @@
 [
     {
+        "name": "Portfolio",
+        "description": "Eine Webseite die eine Übersicht von Projekten und Kompetenzen präsentiert.",
+        "picture": "assets/img/projects/test.jpg",
+        "github": "https://github.com/a13xl/portfolio",
+        "link": "https://alexander-lovasz.developerakademie.net/portfolio",
+        "category": "Angular"
+    },
+    {
         "name": "Ring of Fire",
         "description": "Bei 'Ring of Fire' handelt es sich um ein Trinkspiel. Ziel des Spiels ist es, jeden Spieler an die spezifische Maximalgrenze des persönlichen Alkoholkonsums zu führen.",
         "picture": "assets/img/projects/test.jpg",
@@ -16,27 +24,19 @@
         "category": "JavaScript"
     },
     {
-        "name": "EL POLLO LOCO",
-        "description": "'El pollo loco' ist ein mexikanisches Jump and Run Spiel. Sie müssen über Hühner springen und Münzen und Tabasco einsammeln. Im letzten Level müssen Sie das verrückte Huhn durch Tabasco-Flaschen schmeißen besiegen.",
-        "picture": "assets/img/projects/el-pollo-loco.png",
-        "github": "https://github.com/a13xl/El_pollo_loco",
-        "link": "https://alexander-lovasz.developerakademie.net/el_pollo_loco/",
+        "name": "Join",
+        "description": "'Join' ist ein Kanban Board, dass als Gruppenarbeit erstellt wurde.",
+        "picture": "assets/img/projects/test.jpg",
+        "github": "https://github.com/a13xl/join",
+        "link": "https://alexander-lovasz.developerakademie.net/join",
         "category": "JavaScript"
     },
     {
-        "name": "Ring of Fire",
-        "description": "Bei 'Ring of Fire' handelt es sich um ein Trinkspiel. Ziel des Spiels ist es, jeden Spieler an die spezifische Maximalgrenze des persönlichen Alkoholkonsums zu führen.",
+        "name": "Quizapp",
+        "description": "Die 'Quizapp' ist eine einfache Internetseite, bei der man sein Informatik wissen testen kann.",
         "picture": "assets/img/projects/test.jpg",
-        "github": "https://github.com/a13xl/Ring-of-Fire",
-        "link": "https://ring-of-fire-492b2.web.app",
-        "category": "Angular"
-    },
-    {
-        "name": "",
-        "description": "",
-        "picture": "",
-        "github": "",
-        "link": "",
-        "category": ""
+        "github": "https://github.com/a13xl/quizapp",
+        "link": "https://alexander-lovasz.developerakademie.net/quizapp/",
+        "category": "JavaScript"
     }
 ]

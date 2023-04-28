@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Angular",
+        "img": "assets/img/skills/angular.png"
+    },
+    {
+        "name": "Firebase",
+        "img": "assets/img/skills/firebase.png"
+    },
+    {
+        "name": "TypeScript",
+        "img": "assets/img/skills/typescript.png"
+    },
+    {
+        "name": "JavaScript",
+        "img": "assets/img/skills/js.png"
+    },
+    {
+        "name": "API",
+        "img": "assets/img/skills/api.png"
+    },
+    {
+        "name": "HTML / CSS",
+        "img": "assets/img/skills/html-css.png"
+    },
+    {
+        "name": "PowerShell",
+        "img": "assets/img/skills/ps.png"
+    },
+    {
+        "name": "Shell",
+        "img": "assets/img/skills/shell.png"
+    },
+    {
+        "name": "Linux",
+        "img": "assets/img/skills/linux.png"
+    },
+    {
+        "name": "Windows",
+        "img": "assets/img/skills/windows.png"
+    }
+    
+]

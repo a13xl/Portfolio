@@ -1,22 +1,38 @@
 <app-navigation-bar></app-navigation-bar>
 <div class="about-me-container margin-site box">
-    <img src="assets/img/profile02.jpg" alt="photo 2 of me">
+    <img src="assets/img/profile02.jpg" alt="Photo 2 of me">
     <div class="about-me-txt">
         <h2>About me</h2>
         <div class="underline-h2"></div>
+        
+        <span>
+            " Ich bin ein begeisterter Outdoor-Sportler (Kajakfahren 
+            für immer) und Front-End-Entwickler, der gerne 
+            Grenzen überschreitet " MUSTER
+        </span>
+        <div class="underline-txt"></div>
 
-        <div>
-            <span>
-                " Ich bin ein begeisterter Outdoor-Sportler (Kajakfahren 
-                für immer) und Front-End-Entwickler, der gerne 
-                Grenzen überschreitet " MUSTER
-            </span>
-        </div>
-
-        <div>
-            <i class="fab fa-js"></i>
-
+        <div class="skill-box">
+            <div *ngFor="let skill of skills; let i = index;" (mouseover)="toggleText(i)" (mouseout)="toggleText(i)">
+                <img src="{{ skill['img'] }}" alt="{{ skill['name'] }} Picture">
+                <span #skillTitle class="d-none">{{ skill['name'] }}</span>
+            </div>
         </div>
     </div>
+</div>
 
+<div class="quote-container margin-site">
+    <div class="quote-icon"><img src="assets/img/icons/quote.png" alt="quote icon"></div>
+    <span class="quote-txt">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus a ab impedit commodi 
+        deserunt nobis, placeat ducimus rerum earum tempore! Porro facere exercitationem dolorum 
+        perferendis similique, illum fugiat sequi nulla.
+    </span>
+    <img class="quote-autor-img" src="assets/img/profile02.jpg" alt="john doe picture">
+    <span class="quote-autor-name">John Doe, CTO</span>
+    <div class="underline-quote">
+        <div class="underline-quote-line"></div>
+        <div class="underline-quote-circle"></div>
+        <div class="underline-quote-circle"></div>
+    </div>
 </div>
