@@ -20,6 +20,10 @@ a {
     justify-content: space-between;
     align-items: center;
 
+    a:hover {
+        transform: scale(1.1);
+    }
+
     img {
         height: 50px;
     }
