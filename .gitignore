@@ -44,3 +44,6 @@ Thumbs.db
 .gitignore
 .htaccess
 up.sh
+
+# Impressum
+/src/app/impressum/impressum.component.html

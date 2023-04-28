@@ -12,6 +12,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { ImpressumComponent } from './impressum/impressum.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +24,14 @@ import { HomeComponent } from './home/home.component';
     ProjectsComponent,
     FooterComponent,
     HomeComponent,
+    ImpressumComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
       {path: 'about-me', component: AboutMeComponent},
+      {path: 'impressum', component: ImpressumComponent},
     ]),
     /* AppRoutingModule,
     FormsModule,

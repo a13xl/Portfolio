@@ -1,0 +1,16 @@
+// import globale style
+@import "src/_globals.scss";
+
+.impressum {
+    margin-top: 64px;
+    padding: $spacing-L $spacing-XXL;
+    background-color: $background-color02;
+}
+
+.privacy-policy {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    padding: $spacing-L $spacing-XXL;
+
+    background-color: $background-color02;
+}
