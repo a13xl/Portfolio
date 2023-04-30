@@ -42,7 +42,7 @@ h2 {
 
 .underline-h2 {
     height: 4px;
-    width: 166px;
+    width: 178px;
     margin-top: 10px;
     margin-bottom: calc(3px + $spacing-L);
     background-color: #0A0A0B;
@@ -51,7 +51,7 @@ h2 {
 
 .underline-txt {
     height: 1px;
-    width: 166px;
+    width: 178px;
     margin-top: 29px;
     margin-bottom: calc(22px + $spacing-L);
     background-color: #0A0A0B;
@@ -71,6 +71,12 @@ h2 {
         height: 80px;
         width: 85px;
         margin-bottom: 15px;
+
+        &:hover {
+            img {
+                transform: scale(0.8);
+            }
+        }
     }
 
     img {
