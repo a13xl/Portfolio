@@ -2,9 +2,9 @@
     <div class="navi-container noselect">
         <a class="margin-site" href="#home"><img src="favicon.ico"></a>
         <div class="navi-link margin-site">
-            <a [routerLink]="''" (click)="goToTop()"><span>HOME</span></a>
-            <a [routerLink]="'/about-me'" (click)="goToTop()"><span>ÜBER MICH</span></a>
-            <a href="#projects"><span>MEINE PROJEKTE</span></a>
+            <a [routerLink]="'/'" (click)="scrollHeader()"><span>HOME</span></a>
+            <a [routerLink]="'/about-me'" (click)="scrollTop()"><span>ÜBER MICH</span></a>
+            <a [routerLink]="'/'" fragment="projects" ><span>MEINE PROJEKTE</span></a> <!-- href="#projects" -->
         </div>
     </div>
 </nav>
