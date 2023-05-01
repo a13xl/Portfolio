@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-
+  
+  goToTop() {
+    window.scroll({
+      top: 0,
+      left:0,
+      behavior: 'smooth'
+    })
+  }
+  
 }
