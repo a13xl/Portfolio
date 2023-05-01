@@ -20,7 +20,7 @@ export class NavigationBarComponent {
       })
     } else {
       // scroll to top instant
-      window.scrollTo(0, 0);
+      this.scrollTop();
     }
   }
 
