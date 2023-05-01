@@ -4,7 +4,7 @@
         <div class="navi-link margin-site">
             <a [routerLink]="'/'" (click)="scrollHeader()"><span>HOME</span></a>
             <a [routerLink]="'/about-me'" (click)="scrollTop()"><span>ÜBER MICH</span></a>
-            <a [routerLink]="'/'" fragment="projects" ><span>MEINE PROJEKTE</span></a> <!-- href="#projects" -->
+            <a (click)="goToAnchor('projects')"><span>MEINE PROJEKTE</span></a> <!-- href="#projects" | [routerLink]="'/'" [fragment]="'projects'"-->
         </div>
     </div>
 </nav>

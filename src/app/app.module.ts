@@ -30,7 +30,12 @@ import { ImpressumComponent } from './impressum/impressum.component';
       {path: '', component: HomeComponent},
       {path: 'about-me', component: AboutMeComponent},
       {path: 'impressum', component: ImpressumComponent},
-    ]),
+    ],
+    {
+      anchorScrolling: 'enabled',
+      onSameUrlNavigation: 'reload',
+      scrollPositionRestoration: 'enabled'
+    }),
     /* AppRoutingModule,
     FormsModule,
     ReactiveFormsModule */

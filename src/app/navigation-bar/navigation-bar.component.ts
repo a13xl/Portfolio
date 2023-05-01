@@ -7,24 +7,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./navigation-bar.component.scss']
 })
 export class NavigationBarComponent {
+  url = '/';
 
-  constructor(public router: Router) { }
+  constructor(private router: Router) { }
 
   scrollHeader() { // only scroll smooth when on same site
-    if(this.router.url === '/' || this.router.url.startsWith('/#')) {
+    if(this.router.url === this.url || this.router.url.startsWith(this.url+'#')) {
       window.scroll({
         top: 0,
         left:0,
         behavior: 'smooth'
       })
     } else {
-      // jump to top
+      // scroll to top instant
       window.scrollTo(0, 0);
     }
   }
 
   scrollTop() {
     window.scrollTo(0, 0);
+  }
+
+  goToAnchor(anchor: any) {
+    this.router.navigateByUrl(this.url+'#'+anchor);
   }
 
 }

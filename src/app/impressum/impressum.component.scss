@@ -14,3 +14,13 @@
 
     background-color: $background-color02;
 }
+
+a {
+    color: $color-primary;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-action;
+    }
+}
