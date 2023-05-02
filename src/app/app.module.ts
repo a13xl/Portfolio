@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
-import { HeaderComponent } from './header/header.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { FooterComponent } from './footer/footer.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { HeaderComponent } from './components/header/header.component';
+import { AboutMeComponent } from './sites/about-me/about-me.component';
+import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ImpressumComponent } from './impressum/impressum.component';
+import { HomeComponent } from './sites/home/home.component';
+import { ImpressumComponent } from './sites/impressum/impressum.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
     {
       anchorScrolling: 'enabled',
       onSameUrlNavigation: 'reload',
-      scrollPositionRestoration: 'enabled'
+      scrollPositionRestoration: 'disabled'
     }),
     /* AppRoutingModule,
     FormsModule,

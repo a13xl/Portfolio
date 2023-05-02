@@ -1,5 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { HomeComponent } from '../../sites/home/home.component';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -28,8 +29,9 @@ export class NavigationBarComponent {
     window.scrollTo(0, 0);
   }
 
-  goToAnchor(anchor: any) {
-    this.router.navigateByUrl(this.url+'#'+anchor);
+  async goToAnchor(anchor: any) {
+    await this.router.navigateByUrl(this.url)
+    document.getElementById(anchor).scrollIntoView({behavior: "smooth"});
   }
 
 }
