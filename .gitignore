@@ -46,4 +46,4 @@ Thumbs.db
 up.sh
 
 # Impressum
-/src/app/sites/impressum/impressum.component.html
+/src/app/sites/imprint/imprint.component.html

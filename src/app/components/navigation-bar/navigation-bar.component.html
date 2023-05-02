@@ -4,9 +4,15 @@
             <img src="favicon.ico" alt="logo">
         </a>
         <div class="navi-link">
-            <a [routerLink]="'/'" [routerLinkActive]="'router-link-active'" (click)="siteNavigation.scrollHeader('/')"><span>HOME</span></a>
-            <a [routerLink]="'/about-me'" [routerLinkActive]="'router-link-active'" (click)="siteNavigation.scrollTop()"><span>ÜBER MICH</span></a>
-            <a (click)="siteNavigation.goToAnchor('/', 'projects')" [routerLinkActive]="'router-link-active'"><span>MEINE PROJEKTE</span></a>
+            <a [routerLink]="'/'" [routerLinkActive]="'router-link-active'" (click)="siteNavigation.scrollHeader('/')">
+                HOME
+            </a>
+            <a [routerLink]="'/about-me'" [routerLinkActive]="'router-link-active'" (click)="siteNavigation.scrollTop()">
+                ÜBER MICH
+            </a>
+            <a (click)="siteNavigation.goToAnchor('/', 'projects')" [routerLinkActive]="'router-link-active'">
+                MEINE PROJEKTE
+            </a>
         </div>
     </div>
 </nav>

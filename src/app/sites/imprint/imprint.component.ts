@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { SiteNavigationService } from 'src/app/services/site-navigation.service';
 
 @Component({
-  selector: 'app-impressum',
-  templateUrl: './impressum.component.html',
-  styleUrls: ['./impressum.component.scss']
+  selector: 'app-imprint',
+  templateUrl: './imprint.component.html',
+  styleUrls: ['./imprint.component.scss']
 })
-export class ImpressumComponent {
+export class ImprintComponent {
 
   constructor(public siteNavigation: SiteNavigationService) { }
 
