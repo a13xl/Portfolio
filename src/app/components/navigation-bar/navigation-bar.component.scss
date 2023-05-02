@@ -1,16 +1,13 @@
-.smooth-scroll {
-    scroll-behavior: smooth;
+nav {
+    background-color: white;
+    box-shadow: 0 2px 5px #0000004d;
 }
 
 .navi-container {
-    /* margin-top: 30px;
-    margin-bottom: 30px; */
     height: 60px;
-    background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 2px 5px #0000004d;
 
     a {
         height: 50px;

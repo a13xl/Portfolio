@@ -1,10 +1,12 @@
 <nav>
-    <div class="navi-container noselect">
-        <a class="margin-site" href="#home"><img src="favicon.ico"></a>
-        <div class="navi-link margin-site">
-            <a [routerLink]="'/'" [routerLinkActive]="'router-link-active'" (click)="scrollHeader()"><span>HOME</span></a>
-            <a [routerLink]="'/about-me'" [routerLinkActive]="'router-link-active'" (click)="scrollTop()"><span>ÜBER MICH</span></a>
-            <a (click)="goToAnchor('projects')" [routerLinkActive]="'router-link-active'"><span>MEINE PROJEKTE</span></a> <!-- href="#projects" | [routerLink]="'/'" [fragment]="'projects'"-->
+    <div class="navi-container noselect margin-site">
+        <a [routerLink]="'/'" [routerLinkActive]="'router-link-active'" (click)="siteNavigation.scrollHeader('/')">
+            <img src="favicon.ico" alt="logo">
+        </a>
+        <div class="navi-link">
+            <a [routerLink]="'/'" [routerLinkActive]="'router-link-active'" (click)="siteNavigation.scrollHeader('/')"><span>HOME</span></a>
+            <a [routerLink]="'/about-me'" [routerLinkActive]="'router-link-active'" (click)="siteNavigation.scrollTop()"><span>ÜBER MICH</span></a>
+            <a (click)="siteNavigation.goToAnchor('/', 'projects')" [routerLinkActive]="'router-link-active'"><span>MEINE PROJEKTE</span></a>
         </div>
     </div>
 </nav>

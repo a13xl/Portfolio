@@ -11,8 +11,8 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
-    /* "declaration": false, */
-    "composite": true,
+    "declaration": false,
+    /* "composite": true, */
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",

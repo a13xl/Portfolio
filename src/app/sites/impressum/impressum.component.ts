@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { SiteNavigationService } from 'src/app/services/site-navigation.service';
 
 @Component({
   selector: 'app-impressum',
@@ -7,12 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./impressum.component.scss']
 })
 export class ImpressumComponent {
-  url = 'impressum';
 
-  constructor(private router: Router) { }
-
-  goToAnchor(anchor: any) {
-    this.router.navigateByUrl(this.url+'#'+anchor);
-  }
+  constructor(public siteNavigation: SiteNavigationService) { }
 
 }

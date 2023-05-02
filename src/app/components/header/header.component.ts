@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { SiteNavigationService } from 'src/app/services/site-navigation.service';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  url = '/';
 
-  constructor(private router: Router) { }
-
-  goToAnchor(anchor: any) {
-    this.router.navigateByUrl(this.url+'#'+anchor);
-  }
+  constructor(public siteNavigation: SiteNavigationService) { }
 
 }
