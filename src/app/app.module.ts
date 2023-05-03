@@ -8,9 +8,9 @@ import { AboutMeComponent } from './sites/about-me/about-me.component';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { RouterModule } from '@angular/router';
 import { HomeComponent } from './sites/home/home.component';
 import { ImprintComponent } from './sites/imprint/imprint.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -26,19 +26,9 @@ import { ImprintComponent } from './sites/imprint/imprint.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      {path: '', component: HomeComponent},
-      {path: 'about-me', component: AboutMeComponent},
-      {path: 'imprint', component: ImprintComponent},
-    ],
-    {
-      anchorScrolling: 'enabled',
-      onSameUrlNavigation: 'reload',
-      scrollPositionRestoration: 'disabled'
-    }),
-    /* AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule */
+    AppRoutingModule,
+    // FormsModule,
+    // ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

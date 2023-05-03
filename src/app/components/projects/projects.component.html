@@ -1,11 +1,11 @@
-<div class="project-container">
+<section id="projects" class="project-container">
     <h2>Meine Projekte</h2>
     <div class="underline"></div>
 
     <div class="category margin-site">
-        <button #categoryAllBtn (click)="sortProjectCategory(99, 'all')" [disabled]="true" class="btn btn-full">Alle</button>
+        <button #categoryAllBtn (click)="sortProjectCategory(99, 'all')" [disabled]="true" class="btn btn-full noselect">Alle</button>
         <div *ngFor="let category of categories; let i = index;">
-            <button #categoryBtn (click)="sortProjectCategory(i, category)" class="btn btn-full">{{ category }}</button>
+            <button #categoryBtn (click)="sortProjectCategory(i, category)" class="btn btn-full noselect">{{ category }}</button>
         </div>
     </div>
 
@@ -22,4 +22,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>

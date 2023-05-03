@@ -48,6 +48,10 @@ app-navigation-bar {
     display: none !important;
 }
 
+section {
+    scroll-margin-top: 80px;
+}
+
 .btn {
     font-size: 18px;
     border: 1px solid $color-primary;
