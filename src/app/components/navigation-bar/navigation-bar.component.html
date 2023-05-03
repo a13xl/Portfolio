@@ -1,16 +1,17 @@
 <nav>
     <div class="navi-container noselect margin-site">
-        <a [routerLink]="'/'" [routerLinkActive]="'router-link-active'" (click)="siteNavigation.scrollSmoothTop('/')">
+        <a [routerLink]="'/'" (click)="siteNavigation.goToAnchor('/', 'home')">
             <img src="favicon.ico" alt="logo">
         </a>
+
         <div class="navi-link">
-            <a [routerLink]="'/'" (click)="siteNavigation.scrollSmoothTop('/')">
-                HOME
+            <a [routerLink]="'/'" (click)="siteNavigation.goToAnchor('/', 'home')" class="home">
+                STARTSEITE
             </a>
-            <a [routerLink]="'/about-me'" (click)="siteNavigation.scrollTop()">
+            <a [routerLink]="'/about-me'" (click)="siteNavigation.goToAnchor('/about-me', 'about-me')" class="about-me">
                 ÜBER MICH
             </a>
-            <a (click)="siteNavigation.goToAnchor('/', 'projects')"> <!-- [routerLinkActive]="'router-link-active'" -->
+            <a (click)="siteNavigation.goToAnchor('/', 'projects')" class="projects">
                 MEINE PROJEKTE
             </a>
         </div>

@@ -1,6 +1,10 @@
 // import globale style
 @import "src/_globals.scss";
 
+#impressum {
+    scroll-margin-top: calc(60px + 64px); // height nav-bar + margin-top
+}
+
 .impressum {
     margin-top: 64px;
     padding: $spacing-L $spacing-XXL;

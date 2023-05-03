@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SiteNavigationService } from 'src/app/services/site-navigation.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,9 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  
-  scrollTop() {
-    window.scrollTo(0, 0);
-  }
+
+  constructor(public siteNavigation: SiteNavigationService) { }
   
 }
