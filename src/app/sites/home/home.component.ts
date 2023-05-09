@@ -12,7 +12,7 @@ export class HomeComponent {
   sections: NodeListOf<HTMLElement>;
   navA: NodeListOf<HTMLElement>;
 
-  ngOnInit() {
+  /* ngOnInit() {
     this.sections = document.querySelectorAll('section');
     console.log('Sections:', this.sections);
     this.navA = document.querySelectorAll('nav .navi-container .navi-link a');
@@ -40,6 +40,6 @@ export class HomeComponent {
         a.classList.add('active');      
       }
     });
-  }
+  } */
   
 }

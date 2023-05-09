@@ -25,7 +25,7 @@ h2 {
 
 .category {
     display: flex;
-    gap: 15px;
+    gap: 25px;
 
     button {
         padding: 20px 30px;
@@ -93,7 +93,19 @@ h2 {
     }
 }
 
-@media (max-width: 1670px) {
+@media (min-width: 2200px) {
+    .project {
+        gap: 20%;
+    }
+}
+
+@media (min-width: 3000px) {
+    .project {
+        gap: 480px;
+    }
+}
+
+@media (max-width: 1420px) {
     .project {
         justify-content: space-between;
         gap: 0;

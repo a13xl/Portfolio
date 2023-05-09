@@ -16,12 +16,12 @@ img {
 }
 
 #about-me {
+    margin-top: calc(60px + 64px); // height nav-bar + margin-top
     scroll-margin-top: calc(60px + 64px); // height nav-bar + margin-top
 }
 
 .box {
     max-width: 100%;
-    margin-top: 64px;
     margin-bottom: 64px;
     background-color: $background-color02;
 }
@@ -144,15 +144,16 @@ img {
     color: $color-grey;
 }
 
-.quote-autor-img {
+.quote-author-img {
     height: 75px;
     width: 75px;
     margin: 26px 0;
     object-fit: cover;
+    object-position: top;
     border-radius: 100%;
 }
 
-.quote-autor-name {
+.quote-author-name {
     font-weight: bold;
 }
 

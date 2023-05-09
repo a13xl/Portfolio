@@ -1,12 +1,16 @@
 // import globale style
 @import "src/_globals.scss";
 
-#impressum {
+h1 {
+    margin-top: 0;
+}
+
+#legal-notice {
     scroll-margin-top: calc(60px + 64px); // height nav-bar + margin-top
 }
 
 .impressum {
-    margin-top: 64px;
+    margin-top: calc(64px + 60px); // 64px + height nav-bar
     padding: $spacing-L $spacing-XXL;
     background-color: $background-color02;
 }
