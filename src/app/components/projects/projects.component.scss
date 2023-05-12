@@ -111,3 +111,20 @@ h2 {
         gap: 0;
     }
 }
+
+@media (max-width: 1200px) {
+    .project-box {
+        height: unset;
+        /* width: unset; */
+        width: calc(100vw - 2 * $margin-site-default);
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .project-txt {
+        width: unset;
+        padding: 52px 0 32px 0;
+    }
+}

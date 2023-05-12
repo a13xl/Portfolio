@@ -16,6 +16,7 @@ img {
 }
 
 #about-me {
+    position: relative;
     margin-top: calc(60px + 64px); // height nav-bar + margin-top
     scroll-margin-top: calc(60px + 64px); // height nav-bar + margin-top
 }
@@ -31,12 +32,12 @@ img {
 
     display: flex;
     justify-content: space-between;
+}
 
-    img {
-        width: 50%;
-        object-fit: cover;
-        object-position: top;
-    }
+.profile-picture {
+    width: 50%;
+    object-fit: cover;
+    object-position: top;
 }
 
 .about-me-txt {
@@ -176,5 +177,26 @@ img {
         height: 6px;
         width: 6px;
         border-radius: 100%;
+    }
+}
+
+@media (max-width: 1290px) {
+    .about-me-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-picture {
+        width: 450px;
+        margin-top: 150px;
+    }
+
+    .about-me-txt {
+        padding-top: 45px;
+    }
+
+    .about-me-headline {
+        position: absolute;
+        top: 0;
     }
 }

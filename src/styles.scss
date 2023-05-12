@@ -34,7 +34,7 @@ app-navigation-bar {
 }
 
 .margin-site {
-    margin: 0px 10% 0px 10%;
+    margin: 0px $margin-site-default 0px $margin-site-default;
 }
 
 .noselect {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { SiteNavigationService } from 'src/app/services/site-navigation.service';
 
 @Component({
@@ -12,4 +12,8 @@ export class NavigationBarComponent{
 
   constructor(public siteNavigation: SiteNavigationService) { }
 
+  openMenu() {
+    console.log('open Menu');
+    
+  }
 }

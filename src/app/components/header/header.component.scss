@@ -18,7 +18,7 @@ $width: 770px;
 
 .header-img {
     margin: 0;
-    width: 100vw;
+    /* width: 100vw; */
     max-width: 100%;
     overflow: hidden;
 
@@ -42,8 +42,8 @@ $width: 770px;
         position: absolute;
         /* left: 50%; */
         height: auto;
-        width: 100vw;
-        max-width: 100%;
+        /* width: 100vw;
+        max-width: 100%; */
         transform: translateY(1%) translateX(0%);
 
         path {
@@ -96,10 +96,22 @@ $width: 770px;
         display: flex;
         justify-content: center;
     }
+
+    .header-img {
+        svg {
+            transform: translateY(1%) translateX(0.1%);
+        }
+    }
 }
 
 @media (min-width: 3700px) {
     .header-container {
         width: 2967px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header-txt {
+        width: 50%;
     }
 }
