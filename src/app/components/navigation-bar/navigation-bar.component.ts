@@ -7,8 +7,26 @@ import { SiteNavigationService } from 'src/app/services/site-navigation.service'
   styleUrls: ['./navigation-bar.component.scss']
 })
 export class NavigationBarComponent{
-
-  currentSection = '';
+  menuElement = [
+    {
+      name: "STARTSEITE",
+      //class: "home",
+      anchorLink: "'/', 'home'",
+      anchorLinkMobile: "'/', 'home'"
+    },
+    {
+      name: "ÜBER MICH",
+      //class: "about-me",
+      anchorLink: "/about-me', 'about-me",
+      anchorLinkMobile: "/', 'about-me"
+    },
+    {
+      name: "MEINE PROJEKTE",
+      //class: "projects",
+      anchorLink: "'/', 'projects'",
+      anchorLinkMobile: "'/', 'projects'"
+    }
+  ]
 
   constructor(public siteNavigation: SiteNavigationService) { }
 
