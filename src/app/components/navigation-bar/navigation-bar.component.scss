@@ -93,26 +93,42 @@ nav {
 }
 
 /* HAMBURGER */
-.checkbox1:checked + label > .hamburger1 > .bar1{
+.checkbox:checked + label > .hamburger1 > .bar1{
     transform: rotate(45deg);
     transform-origin: 5%;
     width: 41px
 }
 
-.checkbox1:checked + label > .hamburger1 > .bar2 {
+.checkbox:checked + label > .hamburger1 > .bar2 {
     transform: translateX(-40px);
     background-color: transparent;
 }
 
-.checkbox1:checked + label > .hamburger1 > .bar3 {
+.checkbox:checked + label > .hamburger1 > .bar3 {
     transform: translateX(40px);
     background-color: transparent;
 }
 
-.checkbox1:checked + label > .hamburger1 > .bar4 {
+.checkbox:checked + label > .hamburger1 > .bar4 {
     transform-origin: 5%;
     transform: rotate(-45deg);
     width: 41px;
+}
+
+.opn-mobile-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 10%;
+    font-size: 32px;
+    background: white;
+
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    gap: 10%;
 }
 
 @media (max-width: 750px) {

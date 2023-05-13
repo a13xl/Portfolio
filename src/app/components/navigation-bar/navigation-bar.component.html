@@ -1,25 +1,20 @@
 <nav>
     <div class="navi-container noselect margin-site">
-        <a [routerLink]="'/'" (click)="siteNavigation.goToAnchor('/', 'home')">
+        <a [routerLink]="'/'" (click)="siteNavigation.goToAnchor(menuElements[0].router, menuElements[0].anchorLink)">
             <img src="favicon.ico" alt="logo">
         </a>
 
         <div class="navi-link">
-            <a [routerLink]="'/'" (click)="siteNavigation.goToAnchor('/', 'home')" class="home">
-                STARTSEITE
-            </a>
-            <a [routerLink]="'/about-me'" (click)="siteNavigation.goToAnchor('/about-me', 'about-me')" class="about-me">
-                ÜBER MICH
-            </a>
-            <a (click)="siteNavigation.goToAnchor('/', 'projects')" class="projects">
-                MEINE PROJEKTE
+            <a *ngFor="let element of menuElements; let i = index;" 
+                (click)="siteNavigation.goToAnchor(element.router, element.anchorLink)" class="">
+                {{ element.name }}
             </a>
         </div>
 
         <div class="mobile-menu">
             <div>
-                <input type="checkbox" id="checkbox1" class="checkbox1 visuallyHidden">
-                <label for="checkbox1">
+                <input #checkbox type="checkbox" id="checkbox" class="checkbox visuallyHidden">
+                <label for="checkbox">
                     <div class="hamburger hamburger1" (click)="openMenu()">
                         <span class="bar bar1"></span>
                         <span class="bar bar2"></span>
@@ -28,7 +23,12 @@
                     </div>
                 </label>
             </div>
-
+            <div #mobileMenu class="opn-mobile-menu d-none">
+                <a *ngFor="let element of menuElements; let i = index;" 
+                    (click)="closeMobileMenu(); siteNavigation.goToAnchor(element.router, element.anchorLink)" class="">
+                    {{ element.name }}
+                </a>
+            </div>
 
 
         </div>
