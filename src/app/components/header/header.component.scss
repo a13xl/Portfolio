@@ -11,14 +11,13 @@ $width: 770px;
 }
 
 .header-container {
-    height: 630;
     display: flex;
+    flex-direction: column;
     color: white;
 }
 
 .header-img {
     margin: 0;
-    /* width: 100vw; */
     max-width: 100%;
     overflow: hidden;
 
@@ -40,10 +39,7 @@ $width: 770px;
 
     svg {
         position: absolute;
-        /* left: 50%; */
         height: auto;
-        /* width: 100vw;
-        max-width: 100%; */
         transform: translateY(1%) translateX(0%);
 
         path {
@@ -111,7 +107,25 @@ $width: 770px;
 }
 
 @media (max-width: 1000px) {
+    .scroll-down {
+        display: none;
+    }
+
     .header-txt {
-        width: 50%;
+        position: relative;
+        width: unset;
+        padding-top: 32px;
+        color: $color-black;
+
+        h1 {
+            font-size: 48px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .header-txt h1{
+        font-size: 24px;
     }
 }

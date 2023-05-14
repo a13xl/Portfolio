@@ -50,9 +50,8 @@ export class NavigationBarComponent{
   }
 
   closeMobileMenu() {
-    debugger;
-    this.mobileMenu.nativeElement.checked = false;
-    this.openMenu;
+    this.openMenu();
+    this.burgerCheck.nativeElement.checked = false;
   }
 
 }

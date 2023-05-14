@@ -5,7 +5,8 @@ $spacing-input-label-top: 20px;
 $width-input: 612px;
 
 .contact-container {
-    margin: calc(58px - 0.83em) 0 56px 0;
+    margin-top: calc(58px - 0.83em);
+    margin-bottom: 56px;
     
     display: flex;
     align-items: center;
@@ -101,5 +102,19 @@ $width-input: 612px;
         background-color: $color-primary;
         font-weight: bold;
         border-radius: 6px;
+    }
+}
+
+@media (max-width: 800px) {
+    .contact-container span {
+        width: unset;
+    }
+
+    .contact-form {
+        width: 100%;
+
+        input, textarea {
+            width: unset;
+        }
     }
 }

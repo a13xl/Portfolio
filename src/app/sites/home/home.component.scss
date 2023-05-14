@@ -1,0 +1,9 @@
+.only-mobile {
+    display: none;
+}
+
+@media (max-width: 750px) {
+    .only-mobile {
+        display: unset;
+    }
+}
