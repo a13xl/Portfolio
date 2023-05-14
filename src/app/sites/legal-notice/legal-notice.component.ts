@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { SiteNavigationService } from 'src/app/services/site-navigation.service';
 
 @Component({
-  selector: 'app-imprint',
-  templateUrl: './imprint.component.html',
-  styleUrls: ['./imprint.component.scss']
+  selector: 'app-legal-notice',
+  templateUrl: './legal-notice.component.html',
+  styleUrls: ['./legal-notice.component.scss']
 })
-export class ImprintComponent {
+export class LegalNoticeComponent {
   fullname = "Alexander Lovasz"
   street = "Gärtnerweg 1"
   city = "83329 Waging am See"

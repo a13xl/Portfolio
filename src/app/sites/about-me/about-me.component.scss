@@ -119,8 +119,6 @@ img {
 }
 
 .quote-container {
-    margin-bottom: 64px;
-    background-color: $background-color02;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,13 +180,14 @@ img {
 
 @media (max-width: 1290px) {
     .about-me-container {
+        margin-top: 225px;
         flex-direction: column;
         align-items: center;
     }
 
     .profile-picture {
         width: 450px;
-        margin-top: 150px;
+        margin-top: 32px;
     }
 
     .about-me-txt {
@@ -197,6 +196,43 @@ img {
 
     .about-me-headline {
         position: absolute;
-        top: 0;
+        top: -160px;
+    }
+
+    .underline-txt {
+        display: none;
+    }
+
+    .skill-box {
+        margin-top: 55px;
+    }
+}
+
+@media (max-width: 750px) {
+    #about-me {
+        scroll-margin-top: 170px;
+    }
+
+    .about-me-container {
+        margin-top: 145px;
+        background-color: unset;
+    }
+
+    .box {
+        margin-bottom: 0;
+    }
+
+    .about-me-headline {
+        top: -135px;
+    }
+
+    .profile-picture {
+        width: 100vw;
+        margin-top: 0;
+    }
+
+    .quote-container {
+        width: 100vw;
+        margin: 0;
     }
 }

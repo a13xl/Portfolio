@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './sites/home/home.component';
 import { AboutMeComponent } from './sites/about-me/about-me.component';
-import { ImprintComponent } from './sites/imprint/imprint.component';
+import { LegalNoticeComponent } from './sites/legal-notice/legal-notice.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'about-me', component: AboutMeComponent},
-  {path: 'imprint', component: ImprintComponent}
+  {path: 'legal-notice', component: LegalNoticeComponent}
 ];
 
 const routeConf = {

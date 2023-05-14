@@ -47,3 +47,4 @@ up.sh
 
 # Impressum
 /src/app/sites/imprint/imprint.component.html
+/src/app/sites/legal-notice/legal-notice.component.html

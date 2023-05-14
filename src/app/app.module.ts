@@ -9,8 +9,8 @@ import { NavigationBarComponent } from './components/navigation-bar/navigation-b
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './sites/home/home.component';
-import { ImprintComponent } from './sites/imprint/imprint.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LegalNoticeComponent } from './sites/legal-notice/legal-notice.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
     ProjectsComponent,
     FooterComponent,
     HomeComponent,
-    ImprintComponent,
+    LegalNoticeComponent,
   ],
   imports: [
     BrowserModule,

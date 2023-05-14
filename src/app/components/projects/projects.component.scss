@@ -25,6 +25,8 @@ h2 {
 
 .category {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 25px;
 
     button {
@@ -126,5 +128,17 @@ h2 {
     .project-txt {
         width: unset;
         padding: 52px 0 32px 0;
+    }
+}
+
+@media (max-width: 750px) {
+    .project-box .margin-site {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .project img {
+        width: 100%;
+        border: 0;
     }
 }
