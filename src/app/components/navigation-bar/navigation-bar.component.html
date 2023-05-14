@@ -1,6 +1,6 @@
 <nav>
     <div class="navi-container noselect margin-site">
-        <a [routerLink]="'/'" (click)="siteNavigation.goToAnchor(menuElements[0].router, menuElements[0].anchorLink)">
+        <a [routerLink]="'/'" (click)="closeMobileMenu(); siteNavigation.goToAnchor(menuElements[0].router, menuElements[0].anchorLink)">
             <img src="favicon.ico" alt="logo">
         </a>
 
@@ -29,6 +29,9 @@
                     {{ element.name }}
                 </a>
                 <a (click)="closeMobileMenu(); siteNavigation.goToAnchor('/', 'contact')">Kontakt</a>
+                <a (click)="closeMobileMenu(); siteNavigation.goToAnchor('/legal-notice', 'legal-notice')" style="text-align: center;">
+                    Impressum <br> Datenschutzerklärung
+                </a>
             </div>
 
 

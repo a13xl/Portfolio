@@ -40,8 +40,6 @@ export class NavigationBarComponent{
     const burgerOpn = this.burgerCheck.nativeElement;
     const mobileNav = this.mobileMenu.nativeElement;
 
-    console.log(burgerOpn.checked); // true is closing
-
     if(burgerOpn.checked) {
       mobileNav.classList.add('d-none');
     } else {
@@ -50,6 +48,7 @@ export class NavigationBarComponent{
   }
 
   closeMobileMenu() {
+    this.burgerCheck.nativeElement.checked = true;
     this.openMenu();
     this.burgerCheck.nativeElement.checked = false;
   }

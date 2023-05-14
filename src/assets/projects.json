@@ -10,7 +10,7 @@
     {
         "name": "Ring of Fire",
         "description": "Bei 'Ring of Fire' handelt es sich um ein Trinkspiel. Ziel des Spiels ist es, jeden Spieler an die spezifische Maximalgrenze des persönlichen Alkoholkonsums zu führen.",
-        "picture": "assets/img/projects/test.jpg",
+        "picture": "assets/img/projects/ring-of-fire.png",
         "github": "https://github.com/a13xl/Ring-of-Fire",
         "link": "https://ring-of-fire-492b2.web.app",
         "category": "Angular"
@@ -34,7 +34,7 @@
     {
         "name": "Quizapp",
         "description": "Die 'Quizapp' ist eine einfache Internetseite, bei der man sein Informatik wissen testen kann.",
-        "picture": "assets/img/projects/test.jpg",
+        "picture": "assets/img/projects/quizapp.png",
         "github": "https://github.com/a13xl/quizapp",
         "link": "https://alexander-lovasz.developerakademie.net/quizapp/",
         "category": "JavaScript"
