@@ -206,6 +206,10 @@ img {
     .skill-box {
         margin-top: 55px;
     }
+
+    .quote-txt {
+        margin: 0 $margin-site-default 6px $margin-site-default;
+    }
 }
 
 @media (max-width: 750px) {
@@ -234,5 +238,11 @@ img {
     .quote-container {
         width: 100vw;
         margin: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .quote-txt {
+        margin: 0 $margin-site-mobile 6px $margin-site-mobile;
     }
 }

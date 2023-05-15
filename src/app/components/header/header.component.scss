@@ -124,6 +124,13 @@ $width: 770px;
     }
 }
 
+@media (max-width: 800px) {
+    .header-img img {
+        height: 333px;
+        object-position: 50% 41%;
+    }
+}
+
 @media (max-width: 750px) {
     .header-txt h1{
         font-size: 24px;

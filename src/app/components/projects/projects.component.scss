@@ -141,4 +141,16 @@ h2 {
         width: 100%;
         border: 0;
     }
+
+    .project-txt {
+        div {
+            gap: 0;
+            width: 100%;
+            justify-content: space-evenly;
+        }
+
+        h2, span {
+            margin: 0 29px;
+        }
+    }
 }

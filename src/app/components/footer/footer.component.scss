@@ -29,3 +29,16 @@ a {
         height: 50px;
     }
 }
+
+@media (max-width: 750px) {
+    footer {
+        height: 100px;
+        padding: 0 0 20px 0;
+        flex-direction: column-reverse;
+    }
+
+    .footer-logo-container {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+}
