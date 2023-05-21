@@ -140,5 +140,21 @@ nav {
 
     .mobile-menu {
         display: unset;
+
+        a {
+            height: auto;
+        }
+    }
+}
+
+@media (max-height: 690px) {
+    .mobile-menu a {
+        font-size: 26px;
+    }
+}
+
+@media (max-height: 690px) {
+    .mobile-menu a {
+        font-size: 18px;
     }
 }

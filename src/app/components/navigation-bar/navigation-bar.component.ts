@@ -1,4 +1,5 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, ElementRef, Inject, ViewChild } from '@angular/core';
 import { SiteNavigationService } from 'src/app/services/site-navigation.service';
 
 @Component({
@@ -34,7 +35,8 @@ export class NavigationBarComponent{
     }
   ]
 
-  constructor(public siteNavigation: SiteNavigationService) { }
+  constructor(public siteNavigation: SiteNavigationService, 
+    @Inject(DOCUMENT) private document: Document) { }
 
   openMenu() {
     const burgerOpn = this.burgerCheck.nativeElement;
@@ -42,8 +44,11 @@ export class NavigationBarComponent{
 
     if(burgerOpn.checked) {
       mobileNav.classList.add('d-none');
+      this.document.body.classList.remove('overflow-h');
+      
     } else {
       mobileNav.classList.remove('d-none');
+      this.document.body.classList.add('overflow-h');
     }
   }
 
