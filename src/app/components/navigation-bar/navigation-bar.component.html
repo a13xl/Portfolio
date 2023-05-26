@@ -25,7 +25,7 @@
             </div>
             <div #mobileMenu class="opn-mobile-menu d-none">
                 <a *ngFor="let element of menuElements; let i = index;" 
-                    (click)="closeMobileMenu(); siteNavigation.goToAnchor(element.routerMobile, element.anchorLink)" class="">
+                    (click)="closeMobileMenu(); siteNavigation.goToAnchor(element.routerMobile, element.anchorLink)" class="mobile-menu-{{ i }}">
                     {{ element.name }}
                 </a>
                 <a (click)="closeMobileMenu(); siteNavigation.goToAnchor('/', 'contact')">Kontakt</a>

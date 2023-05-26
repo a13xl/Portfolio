@@ -136,3 +136,9 @@ $width: 770px;
         font-size: 24px;
     }
 }
+
+@media (max-width: 365px) {
+    .header-img img {
+        object-position: 60% 41%;
+    }
+}

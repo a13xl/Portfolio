@@ -23,8 +23,12 @@ export class ContactFormComponent {
     if(id == 'nameField') {
       noError = this.checkName(field);
     } else if(id == 'emailField') {
-      noError = this.checkEmail(field);
-    } else if(id == 'messageField') {
+      if(this.checkEmail(field) && this.checkEmailSpaces(field)) {
+        noError = true;
+      } else {
+        noError = false;
+      }
+    } else if (id == 'messageField') {
       noError = this.checkMessage(field);
     }
 
@@ -41,7 +45,8 @@ export class ContactFormComponent {
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
 
-    if(this.checkName(nameField) == true && this.checkEmail(emailField) == true && this.checkMessage(messageField) == true) {
+    if(this.checkName(nameField) == true && this.checkEmail(emailField) == true 
+      && this.checkEmailSpaces(emailField) == true && this.checkMessage(messageField) == true) {
       return true;
     } else {
       return false;
@@ -70,6 +75,16 @@ export class ContactFormComponent {
     const re = /\S+@\S+\.\S+/;
 
     return re.test(email);
+  }
+
+  checkEmailSpaces(email)  {
+    const trimmedEmail = email.value.trim();
+
+    if (trimmedEmail.includes(" ")) {
+      return false;
+    } else {
+      return true;
+    }
   }
 
   checkMessage(inputField) {
@@ -106,12 +121,11 @@ export class ContactFormComponent {
 
   async sendMail() {
     if(this.checkEnableButton() == true) {
-      console.log('Sending Mail', this.contactForm);
 
       let nameField = this.nameField.nativeElement;
       let emailField = this.emailField.nativeElement; // NEU
       let messageField = this.messageField.nativeElement;
-      let sendBtn = this.sendBtn.nativeElement;
+      // let sendBtn = this.sendBtn.nativeElement;
 
       // sende/warte Animation
       this.disableContactForm();
@@ -121,8 +135,9 @@ export class ContactFormComponent {
 
       fd.append('name', requestingName);
       fd.append('message', messageField.value);
+      fd.append('project', "mein@portfolio.de")
       //senden
-      await fetch('online Pfad zu PHP', {
+      await fetch('https://alexander-lovasz.developerakademie.net/send_mail/send_mail.php', {
         method: 'POST',
         body: fd
       });
@@ -132,6 +147,10 @@ export class ContactFormComponent {
       this.showSentMessage();
       this.clearInputs();
     }
+  }
+
+  handleSubmit(event: Event) {
+    event.preventDefault();
   }
 
   showSentMessage() {

@@ -62,20 +62,20 @@ $width-input: 612px;
 
         resize: none;
     }
+}
 
-    button {
-        margin-top: 14px;
-        padding: 20px 41px;
-        font-weight: normal;
+button {
+    margin-top: 14px;
+    padding: 20px 41px;
+    font-weight: normal;
 
-        &:disabled {
+    &:disabled {
+        background-color: #b3c8ea;
+        border: 1px solid #b3c8ea;
+        cursor: unset;
+
+        &:hover {
             background-color: #b3c8ea;
-            border: 1px solid #b3c8ea;
-            cursor: unset;
-
-            &:hover {
-                background-color: #b3c8ea;
-            }
         }
     }
 }
@@ -94,7 +94,7 @@ $width-input: 612px;
 
 .sent-message {
     position: absolute;
-    margin-top: 30%;
+    margin-top: 380px;
     
     span {
         padding: 13px 21px;
@@ -116,5 +116,17 @@ $width-input: 612px;
         input, textarea {
             width: unset;
         }
+    }
+}
+
+@media (max-width: 380px) {
+    button {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 322px) {
+    .sent-message {
+        margin-top: 440px;
     }
 }

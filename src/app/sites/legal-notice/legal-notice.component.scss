@@ -32,3 +32,95 @@ a {
         color: $color-action;
     }
 }
+
+@media (max-width: 1150px) {
+    h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 985px) {
+    .impressum {
+        padding: $spacing-L $spacing-XL;
+    }
+
+    .privacy-policy {
+        padding: $spacing-L $spacing-XL;
+    }
+}
+
+@media (max-width: 750px) {
+    .margin-site {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    a{
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width: 588px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p, li {
+        font-size: 16px;
+    }
+
+    .impressum {
+        padding: $spacing-L $spacing-L;
+    }
+
+    .privacy-policy {
+        padding: $spacing-L $spacing-L;
+    }
+}
+
+@media (max-width: 350px) {
+    .impressum {
+        padding: $spacing-L 10px;
+    }
+
+    .privacy-policy {
+        padding: $spacing-L 10px;
+    }
+}
+
+@media (max-width: 300px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p, li {
+        font-size: 14px;
+    }
+}

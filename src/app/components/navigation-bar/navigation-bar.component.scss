@@ -52,7 +52,7 @@ nav {
 
 .visuallyHidden {
     position: absolute; 
-    overflow: hidden; 
+    //overflow: hidden; 
     clip: rect(0 0 0 0); 
     height: 1px; width: 1px; 
     margin: -1px; padding: 0; border: 0; 
@@ -120,9 +120,12 @@ nav {
     position: fixed;
     top: 60px;
     left: 0;
-    height: 100vh;
+    // height: 100vh;
+    height: calc(100vh - 60px);
     width: 100vw;
-    /* padding-top: 15%; */
+    padding: 10px;
+    box-sizing: border-box;
+
     font-size: 32px;
     background: white;
 
@@ -131,7 +134,12 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 10%;
+    overflow-y: auto;
 }
+
+/* .mobile-menu-0 {
+    margin-top: -60px;
+} */
 
 @media (max-width: 750px) {
     .navi-link {
@@ -147,14 +155,20 @@ nav {
     }
 }
 
-@media (max-height: 690px) {
+@media (max-height: 690px) OR (max-width: 455px) {
     .mobile-menu a {
         font-size: 26px;
     }
 }
 
-@media (max-height: 690px) {
+@media (max-height: 690px) OR (max-width: 400px) {
     .mobile-menu a {
         font-size: 18px;
+    }
+}
+
+@media (max-height: 260px) {
+    .mobile-menu-0 {
+        padding-top: 5%;
     }
 }
