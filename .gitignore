@@ -42,9 +42,9 @@ testem.log
 Thumbs.db
 
 .gitignore
-.htaccess
 up.sh
+/src/assets/img/*.jpg
+/src/assets/img/*.png
 
 # Impressum
-/src/app/sites/imprint/imprint.component.html
 /src/app/sites/legal-notice/legal-notice.component.html

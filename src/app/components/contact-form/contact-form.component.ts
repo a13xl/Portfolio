@@ -159,7 +159,7 @@ export class ContactFormComponent {
 
     setTimeout(() => {
       sentMessage.classList.add('d-none');
-    }, 5000);
+    }, 2000);
   }
 
   disableContactForm() {

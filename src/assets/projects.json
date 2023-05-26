@@ -1,8 +1,8 @@
 [
     {
         "name": "Portfolio",
-        "description": "Eine Webseite die eine Übersicht von Projekten und Kompetenzen präsentiert.",
-        "picture": "assets/img/projects/test.jpg",
+        "description": "Eine Webseite, die eine Übersicht von Projekten und Kompetenzen präsentiert.",
+        "picture": "assets/img/projects/portfolio.png",
         "github": "https://github.com/a13xl/portfolio",
         "link": "https://alexander-lovasz.developerakademie.net/portfolio",
         "category": "Angular"
