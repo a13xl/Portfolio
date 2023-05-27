@@ -106,6 +106,14 @@ button {
     }
 }
 
+.input-error {
+    height: 18px;
+    margin: 2px 0 0 0;
+    font-size: 16px;
+    color: $color-red;
+    text-align: right;
+}
+
 @media (max-width: 800px) {
     .contact-container span {
         width: unset;

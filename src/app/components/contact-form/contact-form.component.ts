@@ -12,6 +12,9 @@ export class ContactFormComponent {
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
+  @ViewChild('nameFieldError') nameFieldError!: ElementRef;
+  @ViewChild('emailFieldError') emailFieldError!: ElementRef;
+  @ViewChild('messageFieldError') messageFieldError!: ElementRef;
   @ViewChild('sendBtn') sendBtn!: ElementRef;
   @ViewChild('sentMessage') sentMessage!: ElementRef;
 
@@ -22,14 +25,13 @@ export class ContactFormComponent {
 
     if(id == 'nameField') {
       noError = this.checkName(field);
+      this.errorTxtName(field);
     } else if(id == 'emailField') {
-      if(this.checkEmail(field) && this.checkEmailSpaces(field)) {
-        noError = true;
-      } else {
-        noError = false;
-      }
+      noError = this.checkEmail(field);
+      this.errorTxtEmail(field);
     } else if (id == 'messageField') {
       noError = this.checkMessage(field);
+      this.errorTxtMessage(field);
     }
 
     if(noError === false) {
@@ -46,7 +48,7 @@ export class ContactFormComponent {
     let messageField = this.messageField.nativeElement;
 
     if(this.checkName(nameField) == true && this.checkEmail(emailField) == true 
-      && this.checkEmailSpaces(emailField) == true && this.checkMessage(messageField) == true) {
+       && this.checkMessage(messageField) == true) {
       return true;
     } else {
       return false;
@@ -70,20 +72,33 @@ export class ContactFormComponent {
   }
 
   checkEmail(inputField) {
-    let email = inputField.value.toLowerCase();
+    const trimmedEmail = inputField.value.trim();
+
+    const email = inputField.value.toLowerCase();
 
     const re = /\S+@\S+\.\S+/;
 
-    return re.test(email);
-  }
-
-  checkEmailSpaces(email)  {
-    const trimmedEmail = email.value.trim();
-
-    if (trimmedEmail.includes(" ")) {
+    if (!re.test(email) || trimmedEmail.includes(" ")) {
       return false;
     } else {
       return true;
+    }
+  }
+
+  errorTxtEmail(inputField) {
+    const errorEmail = this.emailFieldError.nativeElement;
+    const trimmedEmail = inputField.value.trim();
+
+    const email = inputField.value.toLowerCase();
+
+    const re = /\S+@\S+\.\S+/;
+
+    if (re.test(email) && !trimmedEmail.includes(" ")) {
+      errorEmail.innerHTML = '';
+    } else if(email.length < 1) {
+      errorEmail.innerHTML = 'Pflichtfeld';
+    } else {
+      errorEmail.innerHTML = 'Ungültige E-Mail Adresse';
     }
   }
 
@@ -95,11 +110,42 @@ export class ContactFormComponent {
     }
   }
 
+  errorTxtMessage(inputField) {
+    const errorMessage = this.messageFieldError.nativeElement;
+
+    if(inputField.value.length > 25) {
+      errorMessage.innerHTML = '';
+    } else if(inputField.value == 0) {
+      errorMessage.innerHTML = 'Pflichtfeld';
+    } else {
+      errorMessage.innerHTML = 'Nachricht zu kurz';
+    }
+  }
+
   checkName(inputField) {
-    if(inputField.value.length > 1) {
+    const re = /^([^0-9]*)$/;
+
+    if(inputField.value.length > 1 && re.test(inputField.value)) {
       return true;
     } else {
       return false;
+    }
+  }
+
+  errorTxtName(inputField) {
+    const errorName = this.nameFieldError.nativeElement;
+    const re = /^([^0-9]*)$/;
+
+    if(inputField.value.length > 1 && re.test(inputField.value)) {
+      errorName.innerHTML = '';
+    } else if(!re.test(inputField.value)) {
+      errorName.innerHTML = 'Zahlen sind nicht erlaubt'
+    } else if(inputField.value.length == 0){
+      errorName.innerHTML = 'Pflichtfeld'; // Name ungültig
+    } else if (inputField.value.length < 2) {
+      errorName.innerHTML = 'Name zu kurz'
+    } else {
+      errorName.innerHTML = 'Pflichtfeld: Name ungültig';
     }
   }
 

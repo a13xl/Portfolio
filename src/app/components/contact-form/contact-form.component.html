@@ -6,14 +6,17 @@
         <label>Name</label>
         <input #nameField type="text" name="name" required (focus)="resetInputError('nameField')"
         (focusout)="validateInput('nameField')" (keyup)="enableButton()" maxlength="75">
+        <p #nameFieldError class="input-error"> </p>
 
         <label>E-Mail Adresse</label>
         <input #emailField type="email" name="name" required (focus)="resetInputError('emailField')"
         (focusout)="validateInput('emailField')" (keyup)="enableButton()" maxlength="75">
+        <p #emailFieldError class="input-error"></p>
 
         <label>Nachricht</label>
         <textarea #messageField type="text" name="message" required (focus)="resetInputError('messageField')"
         (focusout)="validateInput('messageField')" (keyup)="enableButton()" maxlength="2048"></textarea>
+        <p #messageFieldError class="input-error"></p>
         
         <div class="btn-container">
             <button class="btn btn-full noselect" #sendBtn [disabled]="true" title="Bitte Felder ausfüllen">Senden</button>
