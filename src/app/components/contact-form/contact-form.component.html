@@ -5,17 +5,17 @@
     <form (submit)="handleSubmit($event); sendMail()" ngNativeValidate #contactForm class="contact-form">
         <label>Name</label>
         <input #nameField type="text" name="name" required (focus)="resetInputError('nameField')"
-        (focusout)="validateInput('nameField')" (keyup)="enableButton()" maxlength="75">
+        (focusout)="validateInput('nameField')" (input)="validateInput('nameField'); resetInputError('nameField'); enableButton()" maxlength="75">
         <p #nameFieldError class="input-error"> </p>
 
         <label>E-Mail Adresse</label>
         <input #emailField type="email" name="name" required (focus)="resetInputError('emailField')"
-        (focusout)="validateInput('emailField')" (keyup)="enableButton()" maxlength="75">
+        (focusout)="validateInput('emailField')" (input)="validateInput('emailField'); resetInputError('emailField'); enableButton()" maxlength="75">
         <p #emailFieldError class="input-error"></p>
 
         <label>Nachricht</label>
         <textarea #messageField type="text" name="message" required (focus)="resetInputError('messageField')"
-        (focusout)="validateInput('messageField')" (keyup)="enableButton()" maxlength="2048"></textarea>
+        (focusout)="validateInput('messageField')" (input)="validateInput('messageField'); resetInputError('messageField'); enableButton()" maxlength="2048"></textarea>
         <p #messageFieldError class="input-error"></p>
         
         <div class="btn-container">

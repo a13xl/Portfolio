@@ -1,13 +1,5 @@
 [
     {
-        "name": "Portfolio",
-        "description": "Eine Webseite, die eine Übersicht von Projekten und Kompetenzen präsentiert.",
-        "picture": "assets/img/projects/portfolio.png",
-        "github": "https://github.com/a13xl/portfolio",
-        "link": "https://alexander-lovasz.developerakademie.net/portfolio",
-        "category": "Angular"
-    },
-    {
         "name": "Ring of Fire",
         "description": "Bei 'Ring of Fire' handelt es sich um ein Trinkspiel. Ziel des Spiels ist es, jeden Spieler an die spezifische Maximalgrenze des persönlichen Alkoholkonsums zu führen.",
         "picture": "assets/img/projects/ring-of-fire.png",
@@ -29,14 +21,6 @@
         "picture": "assets/img/projects/join.png",
         "github": "https://github.com/deniseS85/Join",
         "link": "https://gruppen-join-459.developerakademie.net/",
-        "category": "JavaScript"
-    },
-    {
-        "name": "Quizapp",
-        "description": "Die 'Quizapp' ist eine einfache Internetseite, bei der man sein Informatik wissen testen kann.",
-        "picture": "assets/img/projects/quizapp.png",
-        "github": "https://github.com/a13xl/quizapp",
-        "link": "https://alexander-lovasz.developerakademie.net/quizapp/",
         "category": "JavaScript"
     }
 ]

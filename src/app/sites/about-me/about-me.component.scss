@@ -218,7 +218,7 @@ img {
     }
 
     .about-me-container {
-        margin-top: 145px;
+        margin: 145px 0 0 0;
         background-color: unset;
     }
 
@@ -232,6 +232,7 @@ img {
 
     .profile-picture {
         width: 100vw;
+        max-width: 100%;
         margin-top: 0;
     }
 
